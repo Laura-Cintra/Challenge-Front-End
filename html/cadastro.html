@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="" alt="logo">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#duvidas">F.A.Q</a></li>
+                <li><a href="sobre-nos.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="cadastro" method="get">
+            <fieldset>
+                <h1>Cadastrar Conta</h1>
+
+                <label for="idnome">Nome: </label>
+                <input type="text" required name="nome" id="idnome" placeholder="Digite seu nome completo"><br>
+
+                <label for="idcpf">CPF: </label>
+                <input type="text" name="cpf" id="idcpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="Digite seu CPF"><br>
+
+                <label for="idemail">E-mail:</label>
+                <input type="email" name="email" id="idemail" placeholder="Digite seu email"><br>
+
+                <label for="idsenha">Senha: </label>
+                <input maxlength="6" type="password" name="senha" id="idsenha" placeholder="Digite sua senha"><br>
+                
+                <label for="idconfirmasenha">Confirmar Senha: </label>
+                <input maxlength="6" type="password" name="senha" id="idconfirmasenha" placeholder="Digite sua senha novamente"><br>
+
+            <input type="submit" value="Cadastrar">
+            <input type="reset" value="Limpar">
+
+            <p>Já possui uma conta cadastrada?</p>
+            <a href="login.html"><p>Entrar em conta existente</p></a>
+            </fieldset>
+        </form>
+    </main> 
+</body>
+</html>
