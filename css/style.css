@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-style: normal;
+}
+
+.principal{
+    display: flex;
+    height: 100vh;
+}
+
+.contEsquerda{
+    width: 35%;
+    background-color: #013351;
+}
+
+.contDireita{
+    width: 65%;
+}
+
+.logo{
+    min-width: 80px;
+    max-width: 130px;
+    margin: 1em;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+    margin: 1em;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 10px 30px;
+    color: #082737;
+    font-size: 1.2em;
+}
+
+.h1{
+    background-color: #ABCEE4;
+}
+
+h1{
+    font-size: 3em;
+    color: #013351;
+    margin: 20% 5% 10%;
+    justify-content: flex-start;
+    padding: 15px;
+    font-weight: bolder;
+}
+
+.texto-apresentacao{
+    margin-left: 1em;
+    color: white;
+}
+
+.texto-apresentacao > h3{
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-bottom: 3%;
+    font-size: 1.2em;
+}
+
+hr{
+    width: 40%;
+    margin-bottom: 3%;
+}
+
+p{
+    font-size: 1.1em;
+}
+
+.texto-apresentacao > p{
+    margin-bottom: 8%;
+}
+
+.texto-apresentacao > a{
+    font-size: 1.1em;
+    background-color: white;
+    color: #013351;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+.div-img{
+    background-color: #013351;
+    max-width: 430px;
+    height: 430px;
+    border-radius: 50%;
+    margin: 10% auto 10% 40%;
+}
+
+.img-circulo{
+    display: flex;
+    width: 400px;
+    border-radius: 50%;
+    padding: 2% 4% 2% 2%;
+    margin: auto;
+}

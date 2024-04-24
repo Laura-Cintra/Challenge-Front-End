@@ -3,37 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Home</title>
 </head>
 <body>
-    <header>
-    <nav>
-        <img src="/img/Logo-home.png" alt="logo">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#duvidas">F.A.Q</a></li>
-            <li><a href="html/sobre-nos.html">Sobre Nós</a></li>
-            <li><a href="html/login.html">Login</a></li>
-        </ul>
-    </nav>
-    </header>
-
-    <main>
-        <section>
-            <h1>Auto Atendimento</h1>
+    <main class="principal">
+    <div class="contEsquerda">
+    <img class="logo" src="/img/Logo-home.png" alt="logo">
+    
+        <section class="h1">
+            <h1>AUTO ATENDIMENTO</h1>
         </section>
-        <section>
-            <h3>Qualidade e Rapidez</h3>
+        <section class="texto-apresentacao">
+            <h3>Qualidade e <br>Rapidez</h3>
             <hr>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <a href="#bem-vindo">Saiba Mais</a>
         </section>
-        <div>
-            <img src="img/manutencao-vetor.jpg" alt="homem fazendo manutenção de carro - imagem ilustrativa">
+    </div>
+    <div class="contDireita">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#duvidas">F.A.Q</a></li>
+                <li><a href="html/sobre-nos.html">Sobre Nós</a></li>
+                <li><a href="html/login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="div-img">
+            <img class="img-circulo" src="img/manutencao-vetor2.png" alt="homem fazendo manutenção de carro - imagem ilustrativa">
         </div>
+    </div>
     </main>
 
-    <main id="bem-vindo">
+    <main id="bem-vindo" class="apresentacao">
         <h2>Bem vindo ao <span>ChatCar</span>!</h2>
         <h3>O melhor serviço de diagnóstico por IA</h3>
 
@@ -43,7 +46,7 @@
         <a href="html/chatbot.html">Usar Ferramenta</a>
     </main>
 
-    <main>
+    <main class="motivos">
         <h2>Por que usar o ChatCat?</h2>
         <section>
             <img src="img/imagem-fundoclaro.png" alt="imagem exemplo">
@@ -62,7 +65,7 @@
         </section>
     </main>
 
-    <main id="duvidas">
+    <main id="duvidas" class="faq">
         <h2>Dúvidas Frequentes</h2>
 
         <section>
