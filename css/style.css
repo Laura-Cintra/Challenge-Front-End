@@ -58,6 +58,7 @@ h1{
     justify-content: flex-start;
     padding: 15px;
     font-weight: bolder;
+    text-transform: uppercase;
 }
 
 .texto-apresentacao{

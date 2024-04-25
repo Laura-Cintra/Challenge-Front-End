@@ -1,0 +1,64 @@
+*{
+    text-align: center;
+}
+
+body{
+    height: 100vh;
+}
+
+header{
+    color: #082737;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1{
+    font-size: 2.4em;
+    padding: 5px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    font-size: 1.6em;
+    font-weight: 300;
+    padding: 5px;
+}
+
+.logo-figma{
+    max-width: 70px;
+    padding: 5px;
+}
+
+section{
+    justify-content: space-between;
+    margin: 5px 3em;
+}
+
+section > img{
+    margin-top: 5%;
+    max-width: 200px;
+    border-radius: 50%;
+}
+
+section > h3{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 800;
+    padding: 5px;
+}
+
+section > h4{
+    font-size: 1.1em;
+    font-weight: 800;
+    color: #014D79;
+}
+
+section > p{
+    font-size: 1.2em;
+    padding: 5px;
+    color: #013351;
+}
