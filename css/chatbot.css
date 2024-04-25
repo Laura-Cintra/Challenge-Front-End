@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-style: normal;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    background-color: #F0F5F8;
+}
+
+header{
+    display: flex;
+    width: 6%;
+    border-right: 3px solid #ABCEE4;
+    background-color: #fff;
+}
+
+nav ul{
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    align-content: space-between;
+}
+
+ul > li{
+    margin: 15px;
+}
+
+main{
+    width: 94%;
+    margin: 1em;
+}
+
+h1{
+    color: #01273D;
+    font-size: 2em;
+}
+
+h2{
+    color: #001a28ce;
+    font-weight: 600;
+    font-size: 1.4em;
+}
+
+h3{
+    text-align: center;
+    color: #001A28;
+    font-size: 1.3em;
+    margin: 30px auto;
+}
+
+.conteudoProblemas{
+    display: flex;
+    height: 35%;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.conteudoProblemas > section{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    background-color: #5196BE;
+    max-width: 170px;
+    border-radius: 10px;
+    color: #FAFAFA;
+    font-weight: lighter;
+    padding: 0px 10px;
+}
+
+h4{
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.conteudoProblemas > section > img{
+    margin-left: auto;
+}
+
+.blocoTexto{
+    margin-top: 12%;
+}
+
+input{
+    background-color: #013351;
+    color: white;
+    padding: 15px;
+    font-size: 1.1em;
+    width: 97%;
+    border-radius: 42px;
+    border: none;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+ }
