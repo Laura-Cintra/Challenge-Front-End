@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,28 @@
     <link rel="stylesheet" href="../css/login-cadastro.css">
     <title>Cadastro</title>
 </head>
+
 <body>
-    <nav>
+
+    <div class="Nav_Celular">
+        <nav>
+            <div class="menu-hamburger">
+                <img id="logocarro" src="../img/logo-celular.png" alt="logo" class="mostrar">
+                <button id="hamburger-menu" class="hamburger">
+                    ☰
+                </button>
+            </div>
+            <ul id="nav-links" class="nav-links">
+                <button id="close-menu" class="close-menu">✖</button>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#duvidas">F.A.Q</a></li>
+                <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <nav class="NavHome">
         <img src="../img/Logo-nav.png" alt="logo">
         <ul>
             <li><a href="../index.html">Home</a></li>
@@ -25,24 +46,41 @@
                 <input type="text" required name="nome" id="idnome" placeholder="Digite seu nome completo"><br>
 
                 <label for="idcpf">CPF </label><br>
-                <input type="text" name="cpf" id="idcpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="Digite seu CPF"><br>
+                <input type="text" name="cpf" id="idcpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                    placeholder="Digite seu CPF"><br>
 
                 <label for="idemail">E-mail </label><br>
                 <input type="email" name="email" id="idemail" placeholder="Digite seu email"><br>
 
                 <label for="idsenha">Senha </label><br>
                 <input maxlength="6" type="password" name="senha" id="idsenha" placeholder="Digite sua senha"><br>
-                
+
                 <label for="idconfirmasenha">Confirmar Senha </label><br>
-                <input maxlength="6" type="password" name="senha" id="idconfirmasenha" placeholder="Digite sua senha novamente"><br>
+                <input maxlength="6" type="password" name="senha" id="idconfirmasenha"
+                    placeholder="Digite sua senha novamente"><br>
 
-            <input type="submit" value="Cadastrar">
-            <input type="reset" value="Limpar">
+                <input type="submit" value="Cadastrar">
+                <input type="reset" value="Limpar">
 
-            <p>Já possui uma conta cadastrada?</p>
-            <a href="login.html"><p>Entrar em conta existente</p></a>
+                <p>Já possui uma conta cadastrada?</p>
+                <a href="login.html">
+                    <p>Entrar em conta existente</p>
+                </a>
             </fieldset>
         </form>
-    </main> 
+    </main>
+    <footer></footer>
+    <script>
+        document.getElementById('hamburger-menu').addEventListener('click', function () {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.add('active');
+        });
+
+        document.getElementById('close-menu').addEventListener('click', function () {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.remove('active');
+        });
+    </script>
 </body>
+
 </html>

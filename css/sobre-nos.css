@@ -1,68 +1,161 @@
-*{
+* {
     text-align: center;
 }
 
-body{
+body {
     height: 100vh;
 }
 
-header{
+header {
     color: #082737;
     text-align: center;
     margin-top: 20px;
 }
 
-h1{
+h1 {
     font-size: 2.4em;
     padding: 5px;
 }
 
-main{
+main {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-h2{
+h2 {
     font-size: 1.6em;
     font-weight: 300;
     padding: 5px;
 }
 
-.logo-figma{
+.logo-figma {
     max-width: 70px;
     padding: 5px;
 }
 
-a{
+a {
     color: #014D79;
 }
 
-section{
+section {
     justify-content: space-between;
     margin: 5px 3em;
 }
 
-section > img{
+section>img {
     margin-top: 5%;
     max-width: 200px;
     border-radius: 50%;
 }
 
-section > h3{
+section>h3 {
     text-align: center;
     font-size: 1.2em;
     font-weight: 800;
     padding: 5px;
 }
 
-section > h4{
+section>h4 {
     font-size: 1.1em;
     font-weight: 800;
     color: #014D79;
 }
 
-section > p{
+section>p {
     font-size: 1.2em;
     padding: 5px;
     color: #013351;
+}
+
+.Nav_Celular {
+    display: none;
+}
+
+@media screen and (max-width: 670px) {
+    nav ul li a {
+        font-size: 1.1rem;
+        padding-right: 10px;
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .NavHome {
+        display: none;
+    }
+
+    .Nav_Celular {
+        width: 100%;
+        display: flex;
+        margin: 0;
+        border-bottom: 4px solid black;
+        height: 60px;
+        padding: 0;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 44px;
+        padding-right: 10px;
+        border: none;
+        background: none;
+        color: black;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        list-style: none;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        justify-content: center;
+        align-items: center;
+        background-color: #001A28;
+        opacity: 0.9;
+    }
+
+    nav {
+        width: 100%;
+        margin: 0;
+        height: 60px;
+        margin-top: -10px;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links a {
+        color: #ffffff;
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-hamburger {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        height: 60px;
+        padding: 0;
+    }
+
+    .close-menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 32px;
+        border: none;
+        background: none;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
 }

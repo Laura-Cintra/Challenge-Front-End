@@ -1,47 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/chatbot.css">
     <title>ChatBot - ChatCar</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html"><img src="../img/Logo-homeCasa.png" alt="logo home"></a></li>
-                <li><a href="#"><img src="../img/Logo-adicionar.png" alt="logo adicionar"></a></li>
-                <li><a href="../index.html#duvidas"><img src="../img//Logo-ajuda.png" alt="logo interrogacao"></a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>ChatCar</h1>
-        <h2>Como posso te ajudar?</h2>
-        <h3>Problemas Comuns</h3>
-        <section class="conteudoProblemas">
-            <section>
-                <h4>Bateria</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <img src="../img/arrow_circle_up.png" alt="logo enviar">
-            </section>
-            <section>
-                <h4>Freio</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <img src="../img/arrow_circle_up.png" alt="logo enviar">
-            </section>
-            <section>
-                <h4>Motor</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <img src="../img/arrow_circle_up.png" alt="logo enviar">
-            </section>
-        </section>
-        <div class="blocoTexto">
-            <form action="mensagem">
-                <input type="text" placeholder="Digite as características do seu problema automotivo">
-            </form>
+    <div class="container">
+        <div class="Nav_Celular">
+            <nav>
+                <div class="menu-hamburger">
+                    <img id="logocarro" src="../img/logo-celular.png" alt="logo" class="mostrar">
+                    <button id="hamburger-menu" class="hamburger">
+                        ☰
+                    </button>
+                </div>
+                <ul id="nav-links" class="nav-links">
+                    <button id="close-menu" class="close-menu">✖</button>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#duvidas">F.A.Q</a></li>
+                    <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
         </div>
-    </main>
+        <header class="container1">
+            <nav>
+                <ul>
+                    <li><a href="../index.html"><img src="../img/Logo-homeCasa.png" alt="logo home"></a></li>
+                    <li><a href="#"><img src="../img/Logo-adicionar.png" alt="logo adicionar"></a></li>
+                    <li><a href="../index.html#duvidas"><img src="../img//Logo-ajuda.png" alt="logo interrogacao"></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="container2">
+            <h1>ChatCar</h1>
+        </section>
+        <section class="container3">
+            <h2>Como posso te ajudar?</h2>
+        </section>
+        <section class="container4">
+            <h3>Problemas Comuns</h3>
+        </section>
+        <section class="container5">
+            <div class="bloco">
+                <h4>Bateria</h4>
+                <p>Lorem ipsum dolor sit as a abs amet, consecteturad abs adipiscing elit.</p>
+                <img src="../img/arrow_circle_up.png" alt="logo enviar">
+            </div>
+        </section>
+        <section class="container6">
+            <div class="bloco">
+                <h4>Freio</h4>
+                <p>Lorem ipsum dolor sit as a abs amet, consecteturad abs adipiscing elit.</p>
+                <img src="../img/arrow_circle_up.png" alt="logo enviar">
+            </div>
+        </section>
+        <section class="container7">
+            <div class="bloco">
+                <h4>Motor</h4>
+                <p>Lorem ipsum dolor sit as a abs amet abs amet abs ame tabs amet, consecteturad abs consecteturad
+                    consecteturad elit.</p>
+                <img src="../img/arrow_circle_up.png" alt="logo enviar">
+            </div>
+        </section>
+        <section class="container8">
+            <form action="mensagem">
+                <input type="text" placeholder="Digite as características do seu problema automotivo.">
+            </form>
+        </section>
+    </div>
+    <script>
+        document.getElementById('hamburger-menu').addEventListener('click', function () {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.add('active');
+        });
+
+        document.getElementById('close-menu').addEventListener('click', function () {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.remove('active');
+        });
+
+    </script>
 </body>
 </html>

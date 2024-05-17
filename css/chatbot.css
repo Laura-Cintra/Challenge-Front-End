@@ -1,103 +1,313 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
-*{
-    padding: 0;
-    margin: 0;
+* {
+
     font-family: "Nunito Sans", sans-serif;
     font-style: normal;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-    display: flex;
-    height: 100vh;
-    background-color: #F0F5F8;
+.container {
+    display: grid;
+    grid-template-columns: 10vw 30vw 30vw 30vw;
+    grid-template-areas:
+        'sidebar   titulo           titulo           titulo'
+        'sidebar   subtitulo        subtitulo        subtitulo'
+        'sidebar   tituloPrincipal  tituloPrincipal  tituloPrincipal'
+        'sidebar   conteudo1        conteudo2        conteudo3'
+        'sidebar   chat             chat             chat'
+    ;
 }
 
-header{
-    display: flex;
-    width: 6%;
-    border-right: 3px solid #ABCEE4;
+.container1 {
+    grid-area: sidebar;
+    border-right: 5px solid #ABCEE4;
     background-color: #fff;
-}
-
-nav ul{
-    display: flex;
     height: 100vh;
+}
+
+.container1 nav {
+    height: 100vh;
+}
+
+.container1 nav ul {
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
     list-style: none;
+}
+
+.container2 {
+    grid-area: titulo;
+}
+
+.container3 {
+    grid-area: subtitulo;
+}
+
+.container4 {
+    grid-area: tituloPrincipal;
+    text-align: center;
+}
+
+.container5 {
+    grid-area: conteudo1;
+    height: 550px;
+    display: flex;
     justify-content: center;
-    align-content: space-between;
+    align-items: center;
 }
 
-ul > li{
-    margin: 15px;
+.container6 {
+    grid-area: conteudo2;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-main{
-    width: 94%;
-    margin: 1em;
+.container7 {
+    grid-area: conteudo3;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-h1{
+.container8 {
+    grid-area: chat;
+    text-align: center;
+}
+
+input {
+    background-color: #013351;
+    color: white;
+    padding: 15px;
+    height: 40px;
+    width: 90%;
+    font-size: 1.1em;
+    border-radius: 42px;
+    border: none;
+    margin-top: -1600px;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+    font-size: 1.5rem;
+    padding-left: 20px;
+}
+
+.bloco {
+    width: 60%;
+    height: 60%;
+    background-color: #ABCEE4;
+}
+
+h1 {
     color: #01273D;
-    font-size: 2em;
+    font-size: 3em;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
-h2{
+h2 {
     color: #001a28ce;
     font-weight: 600;
-    font-size: 1.4em;
+    font-size: 2em;
+    margin-left: 20px;
 }
 
-h3{
+h3 {
     text-align: center;
     color: #001A28;
-    font-size: 1.3em;
-    margin: 30px auto;
+    font-size: 2.5em;
 }
 
-.conteudoProblemas{
-    display: flex;
-    height: 35%;
-    justify-content: space-around;
-    margin-top: 50px;
-}
-
-.conteudoProblemas > section{
+.bloco {
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
     background-color: #5196BE;
-    max-width: 20%;
     border-radius: 10px;
     color: #FAFAFA;
     font-weight: lighter;
     padding: 20px;
 }
 
-h4{
-    margin-bottom: 20px;
-    font-size: 1.1em;
+.bloco>h4 {
+    font-size: 2rem;
 }
 
-.conteudoProblemas > section > img{
-    margin-left: auto;
+p {
+    font-size: 1.6rem;
 }
 
-.blocoTexto{
-    margin-top: 12%;
+.Nav_Celular {
+    display: none;
+    grid-area: navcel;
 }
 
-input{
-    background-color: #013351;
-    color: white;
-    padding: 15px;
-    font-size: 1.1em;
-    width: 97%;
-    border-radius: 42px;
-    border: none;
+@media screen and (max-width: 895px) {
+    h3 {
+        font-size: 1.9rem;
+    }
+
+    .bloco>h4 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
 }
 
-::-webkit-input-placeholder {
-    color: white;
- }
+@media screen and (max-width: 590px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: 50vw 50vw;
+        grid-template-areas:
+            'navcel navcel'
+            'titulo titulo'
+            'subtitulo subtitulo'
+            'tituloPrincipal tituloPrincipal'
+            'conteudo1  conteudo2'
+            'conteudo3  conteudo3'
+            'chat chat'
+        ;
+    }
+
+    .Nav_Celular {
+        width: 100%;
+        height: 64px;
+        grid-area: navcel;
+        display: flex;
+        border-bottom: 4px solid black;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 44px;
+        padding-right: 10px;
+        border: none;
+        background: none;
+        color: black;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        list-style: none;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        justify-content: center;
+        align-items: center;
+        background-color: #001A28;
+        opacity: 0.9;
+    }
+
+    nav {
+        width: 100%;
+        padding: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links a {
+        color: #ffffff;
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-hamburger {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .close-menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 32px;
+        border: none;
+        background: none;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    .container1 {
+        display: none;
+    }
+
+    .container2 {
+        font-size: 0.7rem;
+    }
+
+    .container3 {
+        font-size: 0.7rem;
+    }
+
+    .container4 {
+        margin-top: 20px;
+    }
+
+    .container4 h3 {
+        font-size: 1.6rem;
+        color: #022033;
+    }
+
+    .container5,
+    .container6,
+    .container7 {
+        height: 300px;
+        text-align: justify;
+    }
+
+    .container5 p,
+    .container6 p,
+    .container7 p {
+        font-size: 0.9rem;
+    }
+
+    .container5 h4,
+    .container6 h4,
+    .container7 h4 {
+        font-size: 1.1rem;
+    }
+
+    form {
+        margin-bottom: 20px;
+    }
+
+    input {
+        height: 34px;
+    }
+
+    ::-webkit-input-placeholder {
+        color: white;
+        font-size: 0.9rem;
+        padding: 0;
+        text-align: center;
+    }
+
+    #logocarro {
+        width: 180px;
+        height: 46px;
+        margin-top: 5px;
+    }
+}

@@ -1,92 +1,141 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
-*{
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: "Nunito Sans", sans-serif;
-    font-style: normal;
 }
 
-.principal{
-    display: flex;
-    height: 100vh;
+body {
+    margin: 0;
 }
 
-.contEsquerda{
-    width: 35%;
-    background-color: #013351;
+h1 {
+    display: none;
 }
 
-.contDireita{
-    width: 65%;
+.container {
+    display: grid;
+    grid-template-columns: 40vw 60vw;
+    grid-template-areas:
+        'apresentacao header'
+        'apresentacao banner';
 }
 
-.logo{
-    min-width: 80px;
-    max-width: 130px;
-    margin: 1em;
-}
-
-nav{
+header {
+    grid-area: header;
     display: flex;
     justify-content: flex-end;
-    font-weight: bold;
-    margin: 1em;
 }
 
-nav ul{
+nav {
     display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.nav-links {
     list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-nav ul li a{
-    display: block;
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
     text-decoration: none;
-    padding: 10px 30px;
-    color: #082737;
-    font-size: 1.2em;
+    padding: 20px;
+    color: #013351;
+    font-size: 1.5em;
 }
 
-.h1{
+.menu-hamburger {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.texto_apresentacao {
+    grid-area: apresentacao;
+    background-color: #013351;
+    color: white;
+}
+
+.texto_apresentacao>img {
+    max-width: 100%;
+    padding: 15px;
+}
+
+.banner {
+    grid-area: banner;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner>img {
+    max-width: 75%;
+    max-height: 75%;
+    margin-left: 20%;
+}
+
+.h2 {
     background-color: #ABCEE4;
 }
 
-h1{
-    font-size: 3em;
-    color: #013351;
+.h2>h2 {
+    font-size: 3rem;
+    width: 40%;
     margin: 20% 5% 10%;
+    color: #013351;
     justify-content: flex-start;
-    padding: 15px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     font-weight: bolder;
     text-transform: uppercase;
 }
 
-.texto-apresentacao{
+.texto_apresentacao>h3 {
     margin-left: 1em;
-    color: white;
-}
-
-.texto-apresentacao > h3{
+    margin-bottom: 3%;
     text-transform: uppercase;
-    font-weight: lighter;
-    margin-bottom: 3%;
-    font-size: 1.2em;
+    font-weight: 500;
+    font-size: 1.4em;
 }
 
-hr{
-    width: 40%;
+hr {
+    width: 55%;
     margin-bottom: 3%;
+    margin-left: 1em;
 }
 
-p{
+#espacinho {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    margin-top: 100px;
+}
+
+.texto_apresentacao>p {
     font-size: 1.1em;
+    margin-left: 1em;
+    margin-bottom: 50px;
 }
 
-.texto-apresentacao > p{
-    margin-bottom: 8%;
-}
-
-.texto-apresentacao > a{
+.texto_apresentacao a {
     font-size: 1.1em;
     background-color: white;
     color: #013351;
@@ -94,64 +143,72 @@ p{
     padding: 10px;
     font-weight: bolder;
     border-radius: 5px;
+    margin-bottom: 50px;
+    margin-left: 1em;
 }
 
-.div-img{
-    background-color: #013351;
-    max-width: 430px;
-    height: 430px;
-    border-radius: 50%;
-    margin: 10% auto 10% 40%;
+.mostrar {
+    display: none;
 }
 
-.img-circulo{
-    display: flex;
-    width: 400px;
-    border-radius: 50%;
-    padding: 2% 4% 2% 2%;
-    margin: auto;
+/* ============================== SEGUNDA TELA */
+
+.container2 {
+    display: grid;
+    grid-template-columns: 55vw 45vw;
+    grid-template-areas:
+        'titulo_bemvindo titulo_bemvindo'
+        'subtitulo_bemvindo subtitulo_bemvindo'
+        'conteudo_descricao img_apresentacao';
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
-.descricao{
-    height: 100vh;
-}
-
-.descricao > h2{
+.titulo_bemvindo {
+    grid-area: titulo_bemvindo;
     color: #001A28;
-    font-size: 2.3em;
-    padding: 2em 1em 10px;
-    text-align: center;
-}
-
-.descricao > h3{
-    color: #000;
-    font-weight: lighter;
-    font-size: 1.4em;
-    text-align: center;
-    margin-bottom: 5%;
-}
-
-.conteudoDescricao{
+    font-size: 2rem;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding: 5px;
 }
 
-.divDescricao{
-    margin-left: 5%;
-}
-
-.divDescricao > h4{
-    margin: 5% auto 2% 10%;
+.subtitulo_bemvindo {
+    grid-area: subtitulo_bemvindo;
+    color: #000;
     font-size: 1.2em;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
-.divDescricao > p{
-    margin-left: 10%;
+.subtitulo_bemvindo>h3 {
+    font-weight: 200;
+}
+
+.conteudo_descricao {
+    grid-area: conteudo_descricao;
+    margin: 0 10%;
+}
+
+.conteudo_descricao>h4 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.botaoFerramnta {
+    grid-area: botaoFerramenta;
+}
+
+.conteudo_descricao>p {
+    font-size: 1.3rem;
     margin-bottom: 10%;
 }
 
-.divDescricao > a{
-    margin-left: 10%;
-    font-size: 1.1em;
+.center>a {
+    font-size: 1.1rem;
     background-color: #013351;
     color: white;
     text-decoration: none;
@@ -160,87 +217,549 @@ p{
     border-radius: 5px;
 }
 
-.conteudoDescricao > img{
-    max-width: 600px;
-    margin: 1em 5em;
+
+.img_apresentacao {
+    grid-area: img_apresentacao;
+    margin: 0;
+    padding: 0;
+    margin: 0 10%;
 }
 
-span{
+.img_apresentacao img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+span {
     color: #40B9FD;
 }
 
-.motivos{
-    height: 100vh;
-    background-color: #abcee442;
+/* ============================== TERCEIRA TELA */
+
+.container3 {
+    display: grid;
+    grid-template-columns: 33, 3vw 33, 3vw 33, 3vw;
+    grid-template-areas:
+        'titulo_motivo titulo_motivo titulo_motivo'
+        ' conteudo_motivo1 conteudo_motivo2 conteudo_motivo3 ';
+    margin-bottom: 100px;
 }
 
-.conteudoMotivo{
+.titulo_motivo {
+    grid-area: titulo_motivo;
+    color: white;
     display: flex;
+    align-items: start;
+    font-size: 1.4rem;
 }
 
-.conteudoMotivo > section{
-    max-width: 100%;
-    justify-content: space-between;
+.titulo_motivo>h2 {
+    background-color: #013351;
+    font-weight: lighter;
+    width: 100%;
     text-align: center;
-    margin-top: 5%;
+    margin-bottom: 40px;
+    padding: 3%;
 }
 
-.conteudoMotivo > section > h3{
+.conteudo_motivo1>h3,
+.conteudo_motivo2>h3,
+.conteudo_motivo3>h3 {
     margin-top: 20px;
     font-size: 1.5em;
     color: #001A28;
 }
 
-.conteudoMotivo > section > p{
-    max-width: 50%;
+.conteudo_motivo1>img,
+.conteudo_motivo2>img,
+.conteudo_motivo3>img {
+    width: 20vw;
+}
+
+.conteudo_motivo1>p,
+.conteudo_motivo2>p,
+.conteudo_motivo3>p {
+    max-width: 60%;
     margin: 20px auto;
+    font-size: 1.1rem;
 }
 
-.h2{
-    background-color: #013351;
-    color: white;
-    padding: 3em;
-    margin-top: 2%;
+.conteudo_motivo1 {
+    grid-area: conteudo_motivo1;
+    text-align: center;
 }
 
-.h2 > h2{
+.conteudo_motivo2 {
+    grid-area: conteudo_motivo2;
+    text-align: center;
+}
+
+.conteudo_motivo3 {
+    grid-area: conteudo_motivo3;
+    text-align: center;
+}
+
+/* ============================== QUARTA TELA */
+
+.conteudoFAQ {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.conteudoFAQ>h2 {
+
     font-size: 1.8em;
     text-align: center;
-    font-weight: lighter;
 }
 
-.faq{
-    height: 90vh;
-}
-
-.conteudoFAQ{
-    margin-top: 90px;
-}
-
-.conteudoFAQ > h2{
-    margin: 1.6em;
-    font-size: 1.8em;
-}
-
-.duvidaFAQ{
+.duvidaFAQ {
     display: flex;
 }
 
-.duvidaFAQ > h3{
+.duvidaFAQ>h3 {
     width: 98%;
     font-size: 1.2em;
     margin-bottom: 1%;
 }
 
-.duvidaFAQ > img{
+.duvidaFAQ>img {
     width: auto;
     height: 13px;
 }
 
-.conteudoFAQ > section{
+.conteudoFAQ>section {
     padding: 15px;
     border: 2px solid #014D79;
     max-width: 90%;
     margin: 2em auto;
     border-radius: 4px;
+}
+
+@media screen and (max-width: 1240px) {
+
+    .h2 h2 {
+        margin-left: 0;
+        width: 15%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 15px;
+    }
+
+    #logoprincipal {
+        width: 40%;
+    }
+
+    .banner {
+        margin-bottom: 90px;
+    }
+
+    .h2 h2 {
+        font-size: 2.4rem;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        padding: 20px;
+        color: #013351;
+        font-size: 1.5em;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    .conteudo_motivo1>img,
+    .conteudo_motivo2>img,
+    .conteudo_motivo3>img {
+        width: 25vw;
+    }
+
+}
+
+@media screen and (max-width: 1150) {
+
+    .titulo_bemvindo>h2 {
+        margin: 0;
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .subtitulo_bemvindo>h3 {
+        font-size: 1rem;
+    }
+
+    .conteudo_descricao h4 {
+        text-align: justify;
+        font-size: 10rem;
+        margin: 0;
+        margin-top: 15px;
+    }
+
+    .conteudo_descricao p {
+        text-align: justify;
+        font-size: 1rem;
+        margin: 0;
+        margin-top: 15px;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 1004px) {
+
+    .nav-links a {
+        padding: 10px;
+    }
+
+    .banner {
+        margin-bottom: 130px;
+    }
+
+    nav ul li {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 755px) {
+    .h2>h2 {
+        margin: 40% 0 10%;
+        font-size: 1.8rem;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    nav {
+        padding: 0;
+    }
+
+    .banner {
+        margin-bottom: 180px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        padding: 5px;
+        color: #013351;
+        font-size: 1.25em;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .container3 {
+        display: grid;
+        grid-template-columns: 33, 3vw 33, 3vw 33, 3vw;
+        grid-template-areas:
+            'titulo_motivo titulo_motivo titulo_motivo'
+            'conteudo_motivo1 conteudo_motivo2 conteudo_motivo3';
+    }
+
+    /* Segunda tela */
+
+    .titulo_bemvindo>h2 {
+        margin: 0;
+        font-size: 1.1em;
+        text-align: center;
+    }
+
+    .subtitulo_bemvindo>h3 {
+        font-size: 1rem;
+    }
+
+    .conteudo_descricao h4 {
+        text-align: justify;
+        font-size: 1rem;
+        margin: 0;
+        margin-top: 15px;
+    }
+
+    .conteudo_descricao p {
+
+        text-align: justify;
+        font-size: 1rem;
+        margin: 0;
+        margin-top: 15px;
+        margin-bottom: 40px;
+    }
+}
+
+
+
+@media screen and (max-width: 580px) {
+
+    .container {
+        height: auto;
+        grid-template-columns: 100vw;
+        grid-template-areas:
+            'header'
+            'apresentacao'
+            'banner'
+            'textoalt';
+        margin-bottom: 30px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 10;
+    }
+
+    nav {
+        width: 100%;
+        padding: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links a {
+        color: #ffffff;
+        font-size: 24px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-hamburger {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .omg {
+        text-align: center;
+        grid-area: textoalt;
+    }
+
+    .texto_apresentacao {
+        min-height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .texto_apresentacao>h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    hr {
+        padding-bottom: 1px;
+        background-color: #000;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 14px;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+        font-size: 1.1rem;
+    }
+
+    .mostrar {
+        display: block;
+    }
+
+    #botaoSaibaMais {
+        font-size: 1.1em;
+        width: 200px;
+        margin: 0 auto;
+        margin-top: 30px;
+        padding: 10px;
+        background-color: #013351;
+        color: white;
+        text-decoration: none;
+        font-weight: bolder;
+        border-radius: 5px;
+    }
+
+    #logocarro {
+        height: auto;
+    }
+
+    .banner img {
+        margin: 0;
+        width: 100vw;
+        height: 100vw;
+    }
+
+    .banner {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .esconder {
+        display: none;
+    }
+
+    /* Segunda tela */
+
+    .container2 {
+        grid-template-columns: 100vw;
+        grid-template-areas:
+            'titulo_bemvindo'
+            'subtitulo_bemvindo'
+            'img_apresentacao'
+            'conteudo_descricao';
+    }
+
+    .titulo_bemvindo {
+        align-items: center;
+        text-align: center;
+    }
+
+    .titulo_bemvindo>h2 {
+        margin: 0;
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    .subtitulo_bemvindo {
+        padding: 5px;
+    }
+
+    .subtitulo_bemvindo>h3 {
+        font-size: 1rem;
+    }
+
+    .conteudo_descricao h4 {
+        text-align: center;
+        font-size: 1rem;
+        margin: 0;
+        margin-top: 15px;
+    }
+
+    .conteudo_descricao p {
+        text-align: justify;
+        font-size: 1rem;
+        margin: 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .center {
+        display: flex;
+        justify-content: center;
+    }
+    .img_apresentacao {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+    #img_apre {
+        width: 90%;
+        height: auto;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .nav-links {
+        background-color: #001A28;
+        opacity: 0.9;
+    }
+    #close-menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 32px;
+        border: none;
+        background: none;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    /* Terceira Tela */
+
+    .container3 {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-areas:
+            'titulo_motivo'
+            'conteudo_motivo1'
+            'conteudo_motivo2'
+            'conteudo_motivo3';
+    }
+
+    .conteudo_motivo1>img,
+    .conteudo_motivo2>img,
+    .conteudo_motivo3>img {
+        width: 65vw;
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    .container3 {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-areas:
+            'titulo_motivo'
+            'conteudo_motivo1'
+            'conteudo_motivo2'
+            'conteudo_motivo3';
+    }
+    .titulo_motivo {
+        grid-area: titulo_motivo;
+        color: white;
+        display: flex;
+        align-items: start;
+        font-size: 1rem;
+    }
+    .conteudo_motivo1>img,
+    .conteudo_motivo2>img,
+    .conteudo_motivo3>img {
+        width: 75vw;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .container2 {
+        grid-template-columns: 100vw;
+        grid-template-areas:
+            'titulo_bemvindo'
+            'subtitulo_bemvindo'
+            'img_apresentacao'
+            'conteudo_descricao';
+    }
+    .center {
+        margin-top: 40px;
+    }
+    .center>a {
+        font-size: 0.9rem;
+        background-color: #013351;
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        font-weight: bolder;
+        border-radius: 5px;
+    }
+    .conteudo_descricao p {
+
+        font-size: 0.5;
+    }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,28 @@
     <link rel="stylesheet" href="../css/sobre-nos.css">
     <title>Sobre Nós - Página de Integrantes</title>
 </head>
+
 <body>
-    <nav>
+    <header>
+        <div class="Nav_Celular">
+            <nav>
+                <div class="menu-hamburger">
+                    <img id="logocarro" src="../img/logo-celular.png" alt="logo" class="mostrar">
+                    <button id="hamburger-menu" class="hamburger">
+                        ☰
+                    </button>
+                </div>
+                <ul id="nav-links" class="nav-links">
+                    <button id="close-menu" class="close-menu">✖</button>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#duvidas">F.A.Q</a></li>
+                    <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <nav class="NavHome">
             <img class="logo" src="../img/Logo-nav.png" alt="logo">
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -17,34 +38,52 @@
                 <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
-    <header>
         <h1>Integrantes ChatCar</h1>
     </header>
     <h2>Turma: 1TDSPK</h2>
-    <a target="_blank" href="https://www.figma.com/file/whwMURtqIou1eqtucrqUzr/Prot%C3%B3tipo-Challenge?type=design&node-id=0%3A1&mode=design&t=iYevczBRwwXpuFpr-1"><img class="logo-figma" src="../img/Logo-figma.png" alt="logo-figma"></a>
-    <a target="_blank" href="https://github.com/Laura-Cintra/Challenge-Front-End"><h3>Repositório Github</h3></a>
-    <main> 
+    <a target="_blank"
+        href="https://www.figma.com/file/whwMURtqIou1eqtucrqUzr/Prot%C3%B3tipo-Challenge?type=design&node-id=0%3A1&mode=design&t=iYevczBRwwXpuFpr-1"><img
+            class="logo-figma" src="../img/Logo-figma.png" alt="logo-figma"></a>
+    <a target="_blank" href="https://github.com/Laura-Cintra/Challenge-Front-End">
+        <h3>Repositório Github</h3>
+    </a>
+    <main>
         <section>
             <img src="../img/fotoHenrique.jpg" alt="foto integrante">
             <h3>Henrique Garcia</h3>
             <h4>RM - 558062</h4>
             <p>Função</p>
-            <a target="_blank" href="https://github.com/HenriqueDML"><img src="../img/Logo-github.png" alt="logo github"></a>
+            <a target="_blank" href="https://github.com/HenriqueDML"><img src="../img/Logo-github.png"
+                    alt="logo github"></a>
         </section>
         <section>
             <img src="../img/fotoLarissa.jpg" alt="foto integrante">
             <h3>Larissa Muniz</h3>
             <h4>RM - 557197</h4>
             <p>Função</p>
-            <a target="_blank" href="https://github.com/larissa557197"><img src="../img/Logo-github.png" alt="logo github"></a>
+            <a target="_blank" href="https://github.com/larissa557197"><img src="../img/Logo-github.png"
+                    alt="logo github"></a>
         </section>
         <section>
             <img src="../img/fotoLaura.jpg" alt="foto integrante">
             <h3>Laura Cintra</h3>
             <h4>RM - 558843</h4>
             <p>Função</p>
-            <a target="_blank" href="https://github.com/Laura-Cintra"><img src="../img/Logo-github.png" alt="logo github"></a>
+            <a target="_blank" href="https://github.com/Laura-Cintra"><img src="../img/Logo-github.png"
+                    alt="logo github"></a>
         </section>
     </main>
+    <script>
+        document.getElementById('hamburger-menu').addEventListener('click', function () {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.add('active');
+        });
+
+        document.getElementById('close-menu').addEventListener('click', function () {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.remove('active');
+        });
+    </script>
 </body>
+
 </html>

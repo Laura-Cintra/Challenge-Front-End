@@ -1,29 +1,29 @@
-main{
+main {
     height: 100vh;
 }
 
-form{
+form {
     max-width: 40%;
-    margin: 20px auto;  
+    margin: 20px auto;
 }
 
-fieldset{
+fieldset {
     border: 3px solid #001a28d5;
     border-radius: 7px;
     padding: 1.5em;
 }
 
-h1{
+h1 {
     color: #082737;
     font-size: 2em;
     margin-bottom: 5%;
 }
 
-label{
+label {
     font-size: 1.2em;
 }
 
-input{
+input {
     font-size: 1em;
     padding: 10px;
     margin: 10px 0;
@@ -32,26 +32,138 @@ input{
     width: 95%;
 }
 
-input[type="submit"]{
+input[type="submit"] {
     margin-top: 25px;
 }
 
-input[type="submit"], input[type="reset"]{
+input[type="submit"],
+input[type="reset"] {
     background-color: #082737;
     color: white;
     border: none;
     font-size: 1.2em;
 }
 
-input[type="reset"]{
+input[type="reset"] {
     margin-bottom: 30px;
 }
 
-p{
+p {
     padding: 2px;
 }
 
-fieldset > a{
+fieldset>a {
     color: #0267A2;
     text-decoration: none;
+}
+
+.Nav_Celular {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    form {
+        max-width: 70%;
+        margin: 20px auto;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    nav ul li a {
+        font-size: 1.1rem;
+        padding-right: 10px;
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    form {
+        max-width: 85%;
+        margin: 20px auto;
+    }
+
+    #logocarro {
+        width: 180px;
+        height: 45px;
+        margin-top: 12px;
+        margin-left: 5px;
+    }
+
+    .NavHome {
+        display: none;
+    }
+
+    .Nav_Celular {
+        width: 100%;
+        display: flex;
+        margin: 0;
+        border-bottom: 3px solid black;
+        height: 60px;
+        padding: 0;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 44px;
+        padding-top: 7px;
+        padding-right: 10px;
+        border: none;
+        background: none;
+        color: black;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        list-style: none;
+        left: 0;
+        width: 100%;
+        height: 55%;
+        justify-content: center;
+        align-items: center;
+        background-color: #001A28;
+        opacity: 0.9;
+    }
+
+    nav {
+        width: 100%;
+        margin: 0;
+        height: 60px;
+        margin-top: -10px;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links a {
+        color: #ffffff;
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-hamburger {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        height: 60px;
+        padding: 0;
+    }
+
+    .close-menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 32px;
+        border: none;
+        background: none;
+        color: #ffffff;
+        cursor: pointer;
+    }
 }

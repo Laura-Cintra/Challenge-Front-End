@@ -1,74 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Home</title>
 </head>
-<body>
-    <main class="principal">
-    <div class="contEsquerda">
-    <img class="logo" src="img/Logo-home.png" alt="logo">
-    
-        <section class="h1">
-            <h1>Auto Atendimento</h1>
-        </section>
-        <section class="texto-apresentacao">
-            <h3>Qualidade e <br>Rapidez</h3>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#bem-vindo">Saiba Mais</a>
-        </section>
-    </div>
-    <div class="contDireita">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#duvidas">F.A.Q</a></li>
-                <li><a href="html/sobre-nos.html">Sobre Nós</a></li>
-                <li><a href="html/login.html">Login</a></li>
-            </ul>
-        </nav>
-        <div class="div-img">
-            <img class="img-circulo" src="img/manutencao-vetor2.png" alt="homem fazendo manutenção de carro - imagem ilustrativa">
-        </div>
-    </div>
-    </main>
 
-    <main id="bem-vindo" class="descricao">
-        <h2>Bem vindo(a) ao <span>ChatCar</span>!</h2>
-        <h3>O melhor serviço de diagnóstico por IA</h3>
-        <section class="conteudoDescricao">
-            <div class="divDescricao">
-                <h4>Somos a solução para acelerar o processo de manutenção do seu carro!</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus a velit at mattis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Praesent lectus mi, placerat et libero sed, varius volutpat nisi. Pellentesque eleifend ipsum ut nisi accumsan, non lacinia ex varius. Dolorem impedit atque repellendus nulla molestias fugit mollitia doloribus tempora possimus.</p>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="menu-hamburger">
+                    <img id="logocarro" src="img/logocelular.png" alt="logo" class="mostrar">
+                    <button id="hamburger-menu" class="hamburger">
+                        ☰
+                    </button>
+                </div>
+                <ul id="nav-links" class="nav-links">
+                    <button class="mostrar" id="close-menu" class="close-menu">✖</button>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#duvidas">F.A.Q</a></li>
+                    <li><a href="html/sobre-nos.html">Sobre Nós</a></li>
+                    <li><a href="html/login.html">Login</a></li>
+                </ul>
+            </nav>
+            <h1>Diagnóstico automotivo</h1>
+        </header>
+        <!-- <main> -->
+        <section class="texto_apresentacao">
+            <h2 id="titulo" class="mostrar">Auto Atendimento</h2>
+            <img id="logoprincipal" class="esconder" src="img/Logo-home.png" alt="logo">
+            <div class="h2 esconder">
+                <h2 class="esconder">Auto Atendimento</h2>
+            </div>
+            <h3 class="esconder">Qualidade e <br>Rapidez</h3>
+            <hr class="esconder">
+            <p class="esconder">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a class="esconder" href="#bem-vindo">Saiba Mais</a>
+            <hr class="esconder" id="espacinho">
+        </section>
+        <section class="banner">
+            <img src="img/vetor.png" alt="homem fazendo manutenção de carro - imagem ilustrativa">
+        </section>
+        <section class="omg">
+            <h3 class="mostrar">Qualidade e <br>Rapidez</h3>
+            <hr class="mostrar">
+            <p class="mostrar">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a class="mostrar" id="botaoSaibaMais" href="#bem-vindo">Saiba Mais</a>
+        </section>
+        <!-- </main> -->
+    </div>
+
+    <main id="bem-vindo" class="container2">
+        <section class="titulo_bemvindo">
+            <h2>Bem vindo(a) ao <span>ChatCar</span>!</h2>
+        </section>
+        <section class="subtitulo_bemvindo">
+            <h3>O melhor serviço de diagnóstico por IA</h3>
+        </section>
+        <section class="conteudo_descricao">
+            <h4>Somos a solução para acelerar o processo de manutenção do seu carro!</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus a velit at mattis.
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Praesent lectus
+                mi, placerat et libero sed, varius volutpat nisi. Pellentesque eleifend ipsum ut nisi accumsan, non
+                lacinia ex varius. Dolorem impedit atque repellendus nulla molestias fugit mollitia doloribus tempora
+                possimus.</p>
+            <div class="center">
                 <a target="_blank" href="html/chatbot.html">Usar Ferramenta</a>
             </div>
-            <img src="img/imagem-fundoazul.png" alt="imagem">
+        </section>
+        <section class="img_apresentacao">
+
+            <img id="img_apre" src="img/imagem-fundoazul.png" alt="imagem">
         </section>
     </main>
 
-    <main class="motivos">
-        <section class="h2">
+    <main class="container3">
+        <section class="titulo_motivo">
             <h2>Por que usar o ChatCar?</h2>
         </section>
-        <section class="conteudoMotivo">
-            <section>
-                <img src="img/imagem-fundoclaro.png" alt="imagem exemplo">
-                <h3>Título 1</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            </section>
-            <section>
-                <img src="img/imagem-fundoclaro.png" alt="imagem exemplo 2">
-                <h3>Título 2</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            </section>
-            <section>
-                <img src="img/imagem-fundoclaro.png" alt="imagem exemplo 3">
-                <h3>Título 3</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            </section>
+        <section class="conteudo_motivo1">
+            <img src="img/imagem-fundoclaro.png" alt="imagem exemplo">
+            <h3>Título 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </section>
+        <section class="conteudo_motivo2">
+            <img src="img/imagem-fundoclaro.png" alt="imagem exemplo 2">
+            <h3>Título 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </section>
+        <section class="conteudo_motivo3">
+            <img src="img/imagem-fundoclaro.png" alt="imagem exemplo 3">
+            <h3>Título 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
         </section>
     </main>
 
@@ -80,7 +106,8 @@
                     <h3>Dúvida 1</h3>
                     <img src="img/expand_less.png" alt="seta para cima">
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus a velit at mattis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus a velit at mattis.
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
             </section>
             <section>
                 <div class="duvidaFAQ">
@@ -102,5 +129,18 @@
             </section>
         </section>
     </main>
+    <footer></footer>
+    <script>
+        document.getElementById('hamburger-menu').addEventListener('click', function () {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.add('active');
+        });
+
+        document.getElementById('close-menu').addEventListener('click', function () {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.remove('active');
+        });
+    </script>
 </body>
+
 </html>
