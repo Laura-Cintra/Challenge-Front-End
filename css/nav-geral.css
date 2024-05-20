@@ -31,3 +31,15 @@ nav ul li a {
     min-width: 80px;
     max-width: 140px;
 }
+
+footer{
+    margin-top: 20px;
+    width: 100%;
+    background-color: #013351;
+    color: white;
+    text-align: center;
+}
+
+footer > p{
+    padding: 10px;
+}
